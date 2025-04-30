@@ -53,11 +53,13 @@ const NationFlags = () => {
 
   return (
     <>
+      <div className="container my-5">
       <ThemeSelector />
-      <div className="   text-center mx-auto p-1">
+      </div>
+      <div className=" mt-5 pt-5  text-center mx-auto p-1">
 
         <h1 className="display-1  text-center fw-bold h1"  >Welcome to &nbsp;
-          <img src="/hero2.png" alt="img" className="img-fluid rounded-circle" width={200} /> Global Flags
+          <img src="/hero2.png" alt="img" className="img-fluid heroimage rounded-circle"  /> Global Flags
         </h1>
       </div>
 

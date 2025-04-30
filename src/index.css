@@ -41,7 +41,7 @@ body {
 
 
 .flag-bubble {
-  width:  140px !important;
+  width: 140px !important;
   height: 140px !important;
   border-radius: 50%;
   overflow: hidden;
@@ -346,7 +346,7 @@ body {
 }
 
 img:hover,
-.glow-effect  {
+.glow-effect {
   box-shadow: 0px 0px 15px black;
   transition: all 0.3s ease-in-out;
 }
@@ -356,4 +356,14 @@ img:hover,
 .h1 {
   font-family: 'Times New Roman', Times, serif;
   font-style: oblique;
+}
+
+.heroimage{
+  width: 100px;
+}
+
+@media (max-width:768px) {
+  .heroimage{
+    width: 50px;
+  }
 }
