@@ -54,12 +54,12 @@ const NationFlags = () => {
   return (
     <>
       <div className="container my-5">
-      <ThemeSelector />
+        <ThemeSelector />
       </div>
       <div className=" mt-5 pt-5  text-center mx-auto p-1">
 
         <h1 className="display-1  text-center fw-bold h1"  >Welcome to &nbsp;
-          <img src="/hero2.png" alt="img" className="img-fluid heroimage rounded-circle"  /> Global Flags
+          <img src="/hero2.png" alt="img" className="img-fluid heroimage rounded-circle" /> Global Flags
         </h1>
       </div>
 
@@ -105,25 +105,39 @@ const NationFlags = () => {
               </div>
             ))}
           </div>
+
+
           <div className="pagination-container mt-4 mb-3 text-center">
+            {/* Previous button */}
             <button
-              className="btn btn-secondary mx-2  mb-3"
+              className="btn btn-secondary mx-2 mb-3"
               disabled={currentPage === 1}
               onClick={() => setCurrentPage(currentPage - 1)}
             >
               Previous
             </button>
 
-            {Array.from({ length: totalPages }, (_, index) => (
-              <button
-                key={index + 1}
-                className={`btn mx-1 mb-3 button3  ${currentPage === index + 1 ? "btn-primary" : "btn-outline-primary"}`}
-                onClick={() => setCurrentPage(index + 1)}
-              >
-                {index + 1}
-              </button>
-            ))}
+            {/* Page number buttons (only previous, current, and next) */}
+            {Array.from({ length: totalPages }, (_, index) => {
+              if (
+                index + 1 === currentPage ||
+                index + 1 === currentPage - 1 ||
+                index + 1 === currentPage + 1
+              ) {
+                return (
+                  <button
+                    key={index + 1}
+                    className={`btn mx-1 mb-3 button3 ${currentPage === index + 1 ? "btn-primary" : "btn-outline-primary"}`}
+                    onClick={() => setCurrentPage(index + 1)}
+                  >
+                    {index + 1}
+                  </button>
+                );
+              }
+              return null;
+            })}
 
+            {/* Next button */}
             <button
               className="btn btn-secondary mx-2 mb-3"
               disabled={currentPage === totalPages}
@@ -132,6 +146,7 @@ const NationFlags = () => {
               Next
             </button>
           </div>
+
 
         </div>
       </div>

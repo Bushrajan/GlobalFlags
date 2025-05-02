@@ -83,13 +83,10 @@ const DetailPage = () => {
                         width={40}
                         className="me-lg-4 rounded-circle"
                         alt="Dislike"
-                        onClick={() => setCount(count > 1 ? count - 1 : 1)} // 1 se neeche nahi jaayega
+                      // onClick={() => setCount(count > 1 ? count - 1 : 1)} // 1 se neeche nahi jaayega
                       />
                     </div>
-                    <img src="/facebook.png" width={40} className="ms-lg-3 m-2 rounded-circle" alt="img" />
-                    <img src="/linkedin.png" width={40} className="ms-lg-3 m-2 rounded-circle" alt="img" />
-                    <img src="/github.png" width={40} className="ms-lg-3 m-2 rounded-circle" alt="img" />
-                    <img src="/whatsap.png" width={40} className="ms-lg-3 m-2 rounded-circle" alt="img" />
+
                   </div>
                 </div>
               </div>
@@ -113,7 +110,21 @@ const DetailPage = () => {
             <button className="btn button2 p-3 btn-primary" onClick={() => navigate(-1)}>Go Back</button>
           </div>
 
-          <div className="container mt-2 mb-2">
+          <div className="container mx-auto text-center mt-2 mb-2">
+            <div>
+              <a href="https://www.facebook.com/profile.php?id=61552824575623" target="_blank" className="text-decoration-none">
+                <img src="/facebook.png" width={40} className="ms-lg-3 m-2 rounded-circle" alt="img" />
+              </a>
+              <a href="https://www.linkedin.com/in/bushra-jan-50653427b/" target="_blank" className="text-decoration-none">
+                <img src="/linkedin.png" width={40} className="ms-lg-3 m-2 rounded-circle" alt="img" />
+              </a>
+              <a href="https://github.com/Bushrajan?tab=repositories" target="_blank" className="text-decoration-none">
+                <img src="/github.png" width={40} className="ms-lg-3 m-2 rounded-circle" alt="img" />
+              </a>
+              <a href="https://web.whatsapp.com/" target="_blank" className="text-decoration-none">
+                <img src="/whatsap.png" width={40} className="ms-lg-3 m-2 rounded-circle" alt="img" />
+              </a>
+            </div>
             <p className="text-center"> Made by Buhsra jan with love ✨ 💗 </p>
           </div>
 
